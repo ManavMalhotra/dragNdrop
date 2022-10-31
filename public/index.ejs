@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./styles.css">
+	</head>
+	<body>
+		<div class="numbers" ondrop="dragDrop(event)" ondragover="allowDrop(event)">
+			<div class="number" id="num1" data-value="<%= a %>" ondragstart="dragStart(event)" draggable="true">A</div>
+			<div class="number" id="num2" data-value="<%= b %>" ondragstart="dragStart(event)" draggable="true">B</div>
+			<div class="number" id="num3" data-value="<%= c %>" ondragstart="dragStart(event)" draggable="true">C</div>
+			<div class="number" id="num4" data-value="<%= d %>" ondragstart="dragStart(event)" draggable="true">D</div>
+			<div class="number" id="num5" data-value="<%= e %>" ondragstart="dragStart(event)" draggable="true">E</div>
+		</div>
+		<div class="operators" ondrop="dragDrop(event)" ondragover="allowDrop(event)">
+			<div class="operator" id="op1" data-value="+" ondragstart="dragStart(event)" draggable="true">+</div>
+			<div class="operator" id="op2" data-value="-" ondragstart="dragStart(event)" draggable="true">-</div>
+			<div class="operator" id="op3" data-value="*" ondragstart="dragStart(event)" draggable="true">*</div>
+			<div class="operator" id="op4" ondragstart="dragStart(event)" draggable="true">/</div>
+			<div class="assignment-operator" id="assignment1" ondrop="dragDrop(event)" ondragover="allowDrop(event)">
+				<div class="assign" id="assign1" data-value="<" onclick="onOperator(this)"><</div>
+				<div class="assign" id="assign2" data-value=">" onclick="onOperator(this)">></div>
+						<div class="assign" id="getInt1" onclick="getInteger()">INTEGER</div>
+				</div>
+			</div>
+			<div class="solution" id="solutionId" ondrop="dragDrop(event)" ondragover="allowDrop(event)"></div>
+			<button onclick="onSubmit()"> SUBMIT </button>
+			
+			<script type="text/javascript" defer type='module' src="script.js"></script>
+			<!-- <script type="module" src="./script.js" ></script> -->
+	</body>
+</html>
